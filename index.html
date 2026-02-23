@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Guardians - Safe and Savvy Seniors. AI-powered scam detection and digital safety education for seniors.">
+    <title>Digital Guardians | Safe and Savvy Seniors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="accessibility.css">
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">Digital Guardians</span>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#analyzer" class="nav-link active">Check for Scams</a></li>
+                    <li><a href="learning.html" class="nav-link">Learn & Practice</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <!-- Accessibility Controls -->
+            <div class="accessibility-controls" aria-label="Accessibility options">
+                <button class="a11y-btn" id="textSizeBtn" aria-label="Increase text size">
+                    <span aria-hidden="true">A+</span>
+                </button>
+                <button class="a11y-btn" id="audioToggleBtn" aria-label="Toggle audio narration">
+                    <span aria-hidden="true">🔊</span>
+                </button>
+                <button class="a11y-btn" id="contrastBtn" aria-label="Toggle high contrast">
+                    <span aria-hidden="true">◐</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <h1 id="hero-heading">Safe and Savvy Seniors</h1>
+                <p class="hero-subtitle">Your friendly guide to staying safe online. Let's check messages together.</p>
+                <p class="hero-encourage">You're doing the right thing by checking — scams are getting harder to spot.</p>
+            </div>
+        </section>
+
+        <!-- Scam Analyzer Section -->
+        <section id="analyzer" class="analyzer-section" aria-labelledby="analyzer-heading">
+            <div class="container">
+                <h2 id="analyzer-heading">Check a Message for Scams</h2>
+                <p class="section-description">Copy and paste an email, text, or message below. We'll help you understand if it's safe.</p>
+                
+                <!-- Privacy Notice -->
+                <div class="privacy-notice" role="note">
+                    <svg class="privacy-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/>
+                    </svg>
+                    <div>
+                        <strong>Your privacy matters:</strong> Messages you paste are analyzed but not stored. We never share your data.
+                    </div>
+                </div>
+
+                <!-- Input Form -->
+                <form id="scamAnalyzerForm" class="analyzer-form" aria-label="Scam message analyzer form">
+                    <div class="form-group">
+                        <label for="messageInput" class="form-label">Paste your message here:</label>
+                        <textarea 
+                            id="messageInput" 
+                            class="form-textarea" 
+                            rows="8" 
+                            placeholder="Copy the email, text, or message you want to check. Include any links or phone numbers mentioned."
+                            aria-describedby="inputHelp"
+                            required
+                        ></textarea>
+                        <p id="inputHelp" class="form-help">Paste the full message — don't worry about formatting. We'll read it the same way you do.</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span class="btn-text">Check This Message</span>
+                        <span class="btn-icon" aria-hidden="true">→</span>
+                    </button>
+                </form>
+
+                <!-- Analysis Results (Hidden by default) -->
+                <div id="analysisResults" class="analysis-results hidden" aria-live="polite">
+                    <!-- Results will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" aria-labelledby="how-heading">
+            <div class="container">
+                <h2 id="how-heading">How We Help You</h2>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <h3>You Paste the Message</h3>
+                        <p>Simply copy and paste any message you're unsure about. No technical skills needed.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <h3>We Analyze It</h3>
+                        <p>Our system checks for common scam tricks using AI trained on the latest threats.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <h3>You Get Clear Advice</h3>
+                        <p>We explain what's wrong (or right) in plain language you can understand.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Teaser Section -->
+        <section class="learning-teaser" aria-labelledby="learn-heading">
+            <div class="container">
+                <div class="teaser-content">
+                    <div class="teaser-text">
+                        <h2 id="learn-heading">Learn at Your Own Pace</h2>
+                        <p>Not sure if a message is a scam? Want to learn safer habits? Our step-by-step tutorials are designed just for you.</p>
+                        <ul class="tutorial-topics">
+                            <li>How to spot scam emails</li>
+                            <li>Creating strong passwords</li>
+                            <li>Safe browsing habits</li>
+                            <li>And more...</li>
+                        </ul>
+                        <a href="learning.html" class="btn btn-secondary btn-large">
+                            <span class="btn-text">Browse Tutorials</span>
+                            <span class="btn-icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                    <div class="teaser-visual" aria-hidden="true">
+                        <div class="preview-card">
+                            <div class="preview-header"></div>
+                            <div class="preview-content"></div>
+                            <div class="preview-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading">About Digital Guardians</h2>
+                <div class="about-content">
+                    <div class="about-mission">
+                        <h3>Our Mission</h3>
+                        <p>We're here to help seniors feel confident and safe online. We believe everyone deserves to enjoy technology without fear.</p>
+                    </div>
+                    <div class="about-values">
+                        <h3>Our Promise to You</h3>
+                        <ul class="values-list">
+                            <li>
+                                <strong>Patient:</strong> We take time to explain things clearly.
+                            </li>
+                            <li>
+                                <strong>Non-judgmental:</strong> Everyone learns at their own pace.
+                            </li>
+                            <li>
+                                <strong>Private:</strong> Your data stays yours.
+                            </li>
+                            <li>
+                                <strong>Free:</strong> Our services are always free.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section class="emergency-section" aria-labelledby="emergency-heading">
+            <div class="container">
+                <h2 id="emergency-heading">Think You've Been Scammed?</h2>
+                <div class="emergency-content">
+                    <div class="emergency-card">
+                        <h3>What to Do Now</h3>
+                        <ol class="emergency-steps">
+                            <li><strong>Don't panic.</strong> These things happen to smart people.</li>
+                            <li><strong>Stop all contact</strong> with the person or website.</li>
+                            <li><strong>Call your bank</strong> using the number on the back of your card.</li>
+                            <li><strong>Change passwords</strong> for any affected accounts.</li>
+                            <li><strong>Report it</strong> to help protect others.</li>
+                        </ol>
+                    </div>
+                    <div class="emergency-resources">
+                        <h3>Where to Report</h3>
+                        <ul class="resource-list">
+                            <li>
+                                <strong>FTC (USA):</strong> <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">reportfraud.ftc.gov</a>
+                            </li>
+                            <li>
+                                <strong>Canadian Anti-Fraud Centre:</strong> <a href="https://www.antifraudcentre.ca" target="_blank" rel="noopener">antifraudcentre.ca</a>
+                            </li>
+                            <li>
+                                <strong>Local Police:</strong> Non-emergency line
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="logo-text">Digital Guardians</span>
+                    </div>
+                    <p class="footer-tagline">Safe and Savvy Seniors</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="#analyzer">Check for Scams</a></li>
+                        <li><a href="learning.html">Learn & Practice</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Digital Guardians. A nonprofit organization. Made with care for seniors everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Narration Element -->
+    <audio id="narrationAudio" aria-hidden="true"></audio>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+</body>
+</html>

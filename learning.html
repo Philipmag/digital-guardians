@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Guardians Learning Center - Step-by-step tutorials for safe digital habits.">
+    <title>Learning Center | Digital Guardians - Safe and Savvy Seniors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <link rel="stylesheet" href="learning.css">
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">Digital Guardians</span>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Check for Scams</a></li>
+                    <li><a href="#" class="nav-link active">Learn & Practice</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <!-- Accessibility Controls -->
+            <div class="accessibility-controls" aria-label="Accessibility options">
+                <button class="a11y-btn" id="textSizeBtn" aria-label="Increase text size">
+                    <span aria-hidden="true">A+</span>
+                </button>
+                <button class="a11y-btn" id="audioToggleBtn" aria-label="Toggle audio narration">
+                    <span aria-hidden="true">🔊</span>
+                </button>
+                <button class="a11y-btn" id="contrastBtn" aria-label="Toggle high contrast">
+                    <span aria-hidden="true">◐</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Learn at Your Own Pace</h1>
+                <p class="page-subtitle">Simple, step-by-step guides to help you feel confident online. Take your time — there's no rush here.</p>
+            </div>
+        </section>
+
+        <!-- Tutorial Categories -->
+        <section class="tutorial-categories" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 id="categories-heading" class="sr-only">Tutorial Categories</h2>
+                
+                <!-- Category Cards -->
+                <div class="categories-grid">
+                    <article class="category-card" data-category="email">
+                        <div class="category-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="64" height="64">
+                                <rect x="4" y="8" width="40" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 12 L24 28 L44 12" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Email Basics</h3>
+                        <p>Learn how to read, write, and manage your emails safely.</p>
+                        <ul class="tutorial-count">2 tutorials</ul>
+                    </article>
+
+                    <article class="category-card" data-category="passwords">
+                        <div class="category-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="64" height="64">
+                                <rect x="12" y="20" width="24" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="24" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M18 14 L18 10 L30 10 L30 14" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Passwords</h3>
+                        <p>Create strong passwords and keep your accounts secure.</p>
+                        <ul class="tutorial-count">3 tutorials</ul>
+                    </article>
+
+                    <article class="category-card" data-category="scams">
+                        <div class="category-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="64" height="64">
+                                <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 8 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Spotting Scams</h3>
+                        <p>Learn to recognize and avoid online scams and fake messages.</p>
+                        <ul class="tutorial-count">4 tutorials</ul>
+                    </article>
+
+                    <article class="category-card" data-category="browsing">
+                        <div class="category-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="64" height="64">
+                                <rect x="4" y="6" width="40" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 16 L16 16" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 24 L16 24" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 32 L16 32" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="30" cy="22" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M26 22 L28 24 L34 18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Safe Browsing</h3>
+                        <p>Browse the web safely and recognize trustworthy websites.</p>
+                        <ul class="tutorial-count">2 tutorials</ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial Modal/Overlay -->
+        <div id="tutorialModal" class="tutorial-modal hidden" role="dialog" aria-labelledby="tutorial-title" aria-modal="true">
+            <div class="modal-backdrop" aria-hidden="true"></div>
+            <div class="modal-content">
+                <!-- Tutorial Header -->
+                <header class="tutorial-header">
+                    <button class="btn-close" id="closeTutorial" aria-label="Close tutorial and return to list">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h2 id="tutorial-title">Tutorial Title</h2>
+                    <div class="tutorial-progress" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="6">
+                        <span class="progress-text">Step <span id="currentStep">1</span> of <span id="totalSteps">6</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Tutorial Content -->
+                <div class="tutorial-content" id="tutorialContent">
+                    <!-- Content loaded dynamically -->
+                </div>
+
+                <!-- Tutorial Navigation -->
+                <footer class="tutorial-footer">
+                    <button class="btn btn-secondary" id="prevStep" disabled>
+                        ← Previous
+                    </button>
+                    
+                    <div class="audio-controls">
+                        <button class="btn btn-secondary btn-small" id="playAudio" aria-label="Read this step aloud">
+                            <span aria-hidden="true">🔊</span> Read Aloud
+                        </button>
+                        <div class="speed-control">
+                            <label for="audioSpeed" class="sr-only">Narration speed</label>
+                            <select id="audioSpeed" class="speed-select">
+                                <option value="0.7">Slow</option>
+                                <option value="0.9" selected>Normal</option>
+                                <option value="1.1">Fast</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="nextStep">
+                        Next →
+                    </button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Quick Start Section -->
+        <section class="quick-start" aria-labelledby="quick-start-heading">
+            <div class="container">
+                <h2 id="quick-start-heading">Quick Start Guide</h2>
+                <div class="quick-start-content">
+                    <div class="quick-start-text">
+                        <h3>New to the internet?</h3>
+                        <p>Start with these fundamentals:</p>
+                        <ol class="quick-start-list">
+                            <li>
+                                <strong>Learn to use email</strong>
+                                <p>Email is how you receive messages, bills, and news online.</p>
+                            </li>
+                            <li>
+                                <strong>Create strong passwords</strong>
+                                <p>Your passwords protect your personal information.</p>
+                            </li>
+                            <li>
+                                <strong>Learn to spot scams</strong>
+                                <p>Knowing what to avoid keeps you safe online.</p>
+                            </li>
+                        </ol>
+                        <p class="encourage">You can do this! Millions of seniors use the internet every day to stay connected with family, manage their finances, and learn new things.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section" aria-labelledby="tips-heading">
+            <div class="container">
+                <h2 id="tips-heading">Everyday Tips</h2>
+                <div class="tips-grid">
+                    <article class="tip-card">
+                        <div class="tip-icon" aria-hidden="true">🔒</div>
+                        <h3>Take Your Time</h3>
+                        <p>Never feel rushed to click a link or provide information. Legitimate businesses won't pressure you.</p>
+                    </article>
+                    <article class="tip-card">
+                        <div class="tip-icon" aria-hidden="true">👥</div>
+                        <h3>Ask for Help</h3>
+                        <p>It's okay to ask a family member or friend to help you check something you're unsure about.</p>
+                    </article>
+                    <article class="tip-card">
+                        <div class="tip-icon" aria-hidden="true">📝</div>
+                        <h3>Write It Down</h3>
+                        <p>Keep a notebook with your passwords and important information in a safe place at home.</p>
+                    </article>
+                    <article class="tip-card">
+                        <div class="tip-icon" aria-hidden="true">🔍</div>
+                        <h3>When in Doubt</h3>
+                        <p>If a message seems strange, it probably is. Trust your instincts and don't respond.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="logo-text">Digital Guardians</span>
+                    </div>
+                    <p class="footer-tagline">Safe and Savvy Seniors</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="index.html#analyzer">Check for Scams</a></li>
+                        <li><a href="#">Learn & Practice</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Digital Guardians. A nonprofit organization. Made with care for seniors everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Narration Element -->
+    <audio id="narrationAudio" aria-hidden="true"></audio>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="learning.js"></script>
+</body>
+</html>

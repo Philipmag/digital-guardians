@@ -1,0 +1,596 @@
+/**
+ * Digital Guardians - Learning Center Styles
+ * 
+ * Tutorial-specific styles for step-by-step learning
+ */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+    padding: var(--space-2xl) 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.page-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+/* Categories Grid */
+.tutorial-categories {
+    padding: var(--space-xl) 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.category-card {
+    background: var(--color-bg-surface);
+    border: var(--border-width) solid var(--color-bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.category-card:hover,
+.category-card:focus {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.category-card:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 2px;
+}
+
+.category-icon {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.category-card h3 {
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-primary);
+}
+
+.category-card p {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+.tutorial-count {
+    margin-top: var(--space-sm);
+    color: var(--color-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+/* Tutorial Modal */
+.tutorial-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    animation: fadeIn var(--transition-fast);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    position: relative;
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius-lg);
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp var(--transition-normal);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tutorial Header */
+.tutorial-header {
+    padding: var(--space-lg);
+    border-bottom: var(--border-width) solid var(--color-bg-secondary);
+    position: relative;
+}
+
+.btn-close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: var(--color-bg-secondary);
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+    background: var(--color-bg-secondary);
+    outline: none;
+}
+
+.btn-close:focus-visible {
+    outline: var(--focus-ring);
+}
+
+.tutorial-header h2 {
+    margin-bottom: var(--space-md);
+    padding-right: 48px;
+}
+
+.tutorial-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.progress-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--color-bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 4px;
+    transition: width var(--transition-normal);
+    width: 16.67%;
+}
+
+/* Tutorial Content */
+.tutorial-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-lg);
+}
+
+.tutorial-step {
+    display: none;
+    animation: fadeIn var(--transition-normal);
+}
+
+.tutorial-step.active {
+    display: block;
+}
+
+.step-header {
+    margin-bottom: var(--space-lg);
+}
+
+.step-number {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.step-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.step-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+/* Screenshot Container */
+.screenshot-container {
+    background: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    margin: var(--space-lg) 0;
+    text-align: center;
+}
+
+.screenshot-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+    border: var(--border-width) solid var(--color-bg-surface);
+}
+
+.screenshot-caption {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background: var(--color-info-light);
+    border: 1px solid var(--color-info);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.highlight-box.warning {
+    background: var(--color-warning-light);
+    border-color: var(--color-warning);
+}
+
+.highlight-box.success {
+    background: var(--color-success-light);
+    border-color: var(--color-success);
+}
+
+.highlight-box h4 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+    color: var(--color-info);
+}
+
+.highlight-box.warning h4 {
+    color: var(--color-warning);
+}
+
+.highlight-box.success h4 {
+    color: var(--color-success);
+}
+
+/* Step Actions */
+.step-action {
+    background: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.step-action h4 {
+    margin-bottom: var(--space-sm);
+}
+
+.action-steps {
+    padding-left: var(--space-lg);
+}
+
+.action-steps li {
+    margin-bottom: var(--space-sm);
+}
+
+/* Key Point */
+.key-point {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--color-success-light);
+    border-radius: var(--border-radius);
+    margin: var(--space-md) 0;
+}
+
+.key-point-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.key-point-content h4 {
+    margin-bottom: var(--space-xs);
+    color: var(--color-success);
+}
+
+/* Tutorial Footer */
+.tutorial-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border-top: var(--border-width) solid var(--color-bg-secondary);
+    flex-wrap: wrap;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.btn-small {
+    padding: var(--space-xs) var(--space-md);
+    min-height: 40px;
+    font-size: var(--font-size-sm);
+}
+
+.speed-select {
+    padding: var(--space-xs) var(--space-sm);
+    border: var(--border-width) solid var(--color-bg-secondary);
+    border-radius: var(--border-radius-sm);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    min-height: 40px;
+}
+
+/* Quick Start Section */
+.quick-start {
+    background: var(--color-bg-secondary);
+    padding: var(--space-xl) 0;
+}
+
+.quick-start-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quick-start-text h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.quick-start-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-lg) 0;
+}
+
+.quick-start-list li {
+    background: var(--color-bg-surface);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.quick-start-list li h4 {
+    margin-bottom: var(--space-xs);
+}
+
+.quick-start-list li p {
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.encourage {
+    font-size: var(--font-size-lg);
+    color: var(--color-secondary);
+    font-style: italic;
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background: var(--color-info-light);
+    border-radius: var(--border-radius);
+}
+
+/* Tips Section */
+.tips-section {
+    padding: var(--space-xl) 0;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.tip-card {
+    background: var(--color-bg-surface);
+    border: var(--border-width) solid var(--color-bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.tip-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-sm);
+}
+
+.tip-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.tip-card p {
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .modal-content {
+        max-height: 95vh;
+        margin: var(--space-sm);
+    }
+    
+    .tutorial-footer {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .tutorial-footer .btn {
+        width: 100%;
+    }
+    
+    .audio-controls {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .tutorial-header h2 {
+        font-size: var(--font-size-lg);
+        padding-right: 0;
+        margin-top: var(--space-lg);
+    }
+    
+    .btn-close {
+        top: var(--space-sm);
+        right: var(--space-sm);
+    }
+    
+    .progress-text {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles for tutorials */
+@media print {
+    .tutorial-modal {
+        position: static;
+    }
+    
+    .modal-backdrop,
+    .tutorial-footer,
+    .btn-close {
+        display: none;
+    }
+    
+    .modal-content {
+        max-height: none;
+        box-shadow: none;
+    }
+    
+    .tutorial-step {
+        display: block !important;
+        page-break-after: always;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .modal-content {
+        animation: none;
+    }
+    
+    .category-card {
+        transition: none;
+    }
+    
+    .tutorial-step {
+        animation: none;
+    }
+}
+
+/* Tutorial Completion */
+.tutorial-complete {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.complete-icon {
+    font-size: 64px;
+    margin-bottom: var(--space-md);
+}
+
+.complete-title {
+    color: var(--color-success);
+    margin-bottom: var(--space-sm);
+}
+
+.complete-message {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+/* Legend for screenshots */
+.screenshot-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.legend-marker {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-marker.button {
+    background: var(--color-primary);
+}
+
+.legend-marker.field {
+    background: var(--color-warning);
+}
+
+.legend-marker.link {
+    background: var(--color-success);
+}
