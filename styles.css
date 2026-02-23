@@ -23,36 +23,36 @@
 
 /* CSS Custom Properties */
 :root {
-    /* Colors - Matching Specification Exactly */
-    --color-primary: #1B5E7A;
-    --color-primary-dark: #0D3D4F;
-    --color-primary-light: #2980A8;
+    /* Brand Colors - aligned with Yeldra-style palette */
+    --color-primary: #2B235A;        /* deep indigo */
+    --color-primary-dark: #1D183F;
+    --color-primary-light: #5C4FF2;
     
-    --color-secondary: #4A7C59;
-    --color-secondary-light: #6B9B79;
-    --color-secondary-dark: #2D5436;
+    --color-secondary: #F4A261;      /* warm accent */
+    --color-secondary-light: #F6BD85;
+    --color-secondary-dark: #E1873A;
     
-    --color-accent: #C77700;
-    --color-accent-light: #D9A64D;
+    --color-accent: #E76F51;         /* supporting accent */
+    --color-accent-light: #F4A28B;
     
-    --color-bg-primary: #FAFAFA;
+    --color-bg-primary: #FFF9F3;     /* warm, soft background */
     --color-bg-surface: #FFFFFF;
-    --color-bg-secondary: #F0F0F0;
+    --color-bg-secondary: #F3ECFF;   /* soft lilac section tint */
     
-    --color-text-primary: #1A1A1A;
-    --color-text-secondary: #4A4A4A;
-    --color-text-muted: #6B6B6B;
+    --color-text-primary: #201A3A;
+    --color-text-secondary: #5E567A;
+    --color-text-muted: #877FA5;
     --color-text-inverse: #FFFFFF;
     
-    /* Semantic Colors - From Specification */
+    /* Semantic Colors */
     --color-safe: #2D7D46;
     --color-safe-bg: #E8F5E9;
-    --color-warning: #C77700;
-    --color-warning-bg: #FFF3E0;
+    --color-warning: #E9A63A;
+    --color-warning-bg: #FFF3D6;
     --color-danger: #C62828;
     --color-danger-bg: #FFEBEE;
-    --color-info: #1B5E7A;
-    --color-info-bg: #E3F2FD;
+    --color-info: #2B235A;
+    --color-info-bg: #ECE5FF;
     
     /* Backward compatibility aliases */
     --color-success: var(--color-safe);
@@ -382,8 +382,8 @@ a:focus-visible {
 
 /* Hero Section */
 .hero {
-    background: radial-gradient(circle at top left, rgba(27, 94, 122, 0.12), transparent 55%),
-                radial-gradient(circle at bottom right, rgba(74, 124, 89, 0.10), transparent 55%),
+    background: radial-gradient(circle at top left, rgba(43, 35, 90, 0.14), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(244, 162, 97, 0.16), transparent 55%),
                 var(--color-bg-primary);
     padding: var(--space-2xl) 0 var(--space-xl);
 }
