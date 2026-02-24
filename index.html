@@ -15,21 +15,23 @@
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
-            <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                </svg>
-                <span class="logo-text">Digital Guardians</span>
-            </div>
-            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Digital Guardians home">
+                <img src="assets/logo.png" alt="Digital Guardians: Safe and Savvy Seniors" class="logo-img" width="220" height="80" />
+            </a>
+            <nav id="mainNav" class="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="#analyzer" class="nav-link active">Check for Scams</a></li>
-                    <li><a href="learning.html" class="nav-link">Learn & Practice</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#analyzer" class="nav-link active">Product</a></li>
+                    <li><a href="#how-heading" class="nav-link">How it works</a></li>
+                    <li><a href="#about" class="nav-link">For who?</a></li>
+                    <li><a href="#plans-heading" class="nav-link">Plans</a></li>
+                    <li><a href="#testimonials-heading" class="nav-link">Testimonials</a></li>
+                    <li><a href="#updates" class="nav-link">Blog</a></li>
                 </ul>
             </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
             <div class="header-actions">
                 <a href="#analyzer" class="btn btn-primary btn-small header-cta">
                     <span class="btn-text">Start checking</span>
@@ -97,21 +99,52 @@
             </div>
         </section>
 
+        <!-- Product Visual Banner -->
+        <section class="product-visual-banner fade-in-section" aria-label="Digital Guardians in action">
+            <div class="container">
+                <div class="product-visual-card">
+                    <div class="product-visual-header">
+                        <span class="product-pill">Live scam check demo</span>
+                    </div>
+                    <div class="product-visual-body">
+                        <div class="product-visual-left">
+                            <div class="product-line product-line-strong"></div>
+                            <div class="product-line"></div>
+                            <div class="product-line product-line-muted"></div>
+                            <div class="product-metric-row">
+                                <span class="product-metric-label">Risk level</span>
+                                <span class="product-metric-value">High</span>
+                            </div>
+                        </div>
+                        <div class="product-visual-right">
+                            <div class="product-tag product-tag-danger">Suspicious links</div>
+                            <div class="product-tag product-tag-warning">Urgent language</div>
+                            <div class="product-tag product-tag-safe">Suggested next step</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Benefits Strip -->
-        <section class="benefits-strip" aria-labelledby="benefits-heading">
+        <section class="benefits-strip fade-in-section" aria-labelledby="benefits-heading">
             <div class="container">
                 <h2 id="benefits-heading" class="section-title benefits-title">Why people trust Digital Guardians</h2>
                 <div class="benefits-grid">
                     <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">◎</div>
                         <p><strong>Clarity in minutes:</strong> Turn a confusing message into a clear “safe or risky” call without guessing.</p>
                     </article>
                     <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">✦</div>
                         <p><strong>Plain language:</strong> Explanations are written for real people, not tech experts or lawyers.</p>
                     </article>
                     <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">🤝</div>
                         <p><strong>Support for loved ones:</strong> Caregivers can quickly review messages with parents or grandparents.</p>
                     </article>
                     <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">✓</div>
                         <p><strong>Habits that last:</strong> Short lessons help you spot red flags before they become problems.</p>
                     </article>
                 </div>
@@ -119,7 +152,7 @@
         </section>
 
         <!-- Scam Analyzer Section -->
-        <section id="analyzer" class="analyzer-section" aria-labelledby="analyzer-heading">
+        <section id="analyzer" class="analyzer-section fade-in-section" aria-labelledby="analyzer-heading">
             <div class="container">
                 <h2 id="analyzer-heading">Check a Message for Scams</h2>
                 <p class="section-description">Copy and paste an email, text, or message below. We'll help you understand if it's safe.</p>
@@ -163,7 +196,7 @@
         </section>
 
         <!-- How It Works Section -->
-        <section class="how-it-works" aria-labelledby="how-heading">
+        <section class="how-it-works fade-in-section" aria-labelledby="how-heading">
             <div class="container">
                 <header class="section-header">
                     <p class="section-kicker">Method</p>
@@ -206,7 +239,7 @@
         </section>
 
         <!-- Learning Teaser Section -->
-        <section class="learning-teaser" aria-labelledby="learn-heading">
+        <section class="learning-teaser fade-in-section" aria-labelledby="learn-heading">
             <div class="container">
                 <div class="teaser-content">
                     <div class="teaser-text">
@@ -250,7 +283,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about-section" aria-labelledby="about-heading">
+        <section id="about" class="about-section fade-in-section" aria-labelledby="about-heading">
             <div class="container">
                 <header class="section-header">
                     <p class="section-kicker">For who?</p>
@@ -321,7 +354,7 @@
         </section>
 
         <!-- Levels of Support / Plans Section -->
-        <section class="plans-section" aria-labelledby="plans-heading">
+        <section class="plans-section fade-in-section" aria-labelledby="plans-heading">
             <div class="container">
                 <header class="section-header">
                     <p class="section-kicker">Levels of support</p>
@@ -361,7 +394,7 @@
         </section>
 
         <!-- Story / Founder Section -->
-        <section class="story-section" aria-labelledby="story-heading">
+        <section class="story-section fade-in-section" aria-labelledby="story-heading">
             <div class="container">
                 <header class="section-header section-header-left">
                     <p class="section-kicker">Our story</p>
@@ -383,7 +416,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials-section" aria-labelledby="testimonials-heading">
+        <section class="testimonials-section fade-in-section" aria-labelledby="testimonials-heading">
             <div class="container">
                 <header class="section-header">
                     <p class="section-kicker">What people say</p>
@@ -406,8 +439,71 @@
             </div>
         </section>
 
+        <!-- Updates Section (trainings + venues) -->
+        <section id="updates" class="updates-section fade-in-section" aria-labelledby="updates-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-kicker">Updates</p>
+                    <h2 id="updates-heading" class="section-title">New trainings and where to find us</h2>
+                    <p class="section-intro">Stay in the loop: upcoming workshops, new learning modules, and venues where Digital Guardians is in use or hosting sessions.</p>
+                </header>
+                <div class="updates-grid">
+                    <div class="updates-column">
+                        <h3 class="updates-column-title">New trainings</h3>
+                        <ul class="updates-list">
+                            <li class="update-item">
+                                <span class="update-badge">New</span>
+                                <div class="update-content">
+                                    <strong>Phishing emails — spot the signs</strong>
+                                    <p>Short module on recognizing fake sender addresses and urgent language. Available in the Learning hub.</p>
+                                </div>
+                            </li>
+                            <li class="update-item">
+                                <span class="update-badge">New</span>
+                                <div class="update-content">
+                                    <strong>Safe shopping online</strong>
+                                    <p>Tips for checking websites and payment requests before you buy. Added this month.</p>
+                                </div>
+                            </li>
+                            <li class="update-item">
+                                <div class="update-content">
+                                    <strong>Grandparent scam awareness</strong>
+                                    <p>Learn how “grandparent” and family-emergency scams work and how to respond calmly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="learning.html" class="btn btn-secondary btn-small">View all tutorials</a>
+                    </div>
+                    <div class="updates-column">
+                        <h3 class="updates-column-title">Venues & events</h3>
+                        <ul class="updates-list">
+                            <li class="update-item update-item-venue">
+                                <div class="update-content">
+                                    <strong>Community Center — North Branch</strong>
+                                    <p>Digital safety drop-in every first Tuesday, 2–4 p.m. Bring your device or questions.</p>
+                                </div>
+                            </li>
+                            <li class="update-item update-item-venue">
+                                <div class="update-content">
+                                    <strong>Senior Center — Westside</strong>
+                                    <p>Workshop “Check before you click” on the third Wednesday of each month.</p>
+                                </div>
+                            </li>
+                            <li class="update-item update-item-venue">
+                                <div class="update-content">
+                                    <strong>Library Tech Help Desk</strong>
+                                    <p>Staff trained on Digital Guardians; ask for a quick walkthrough at the desk.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="updates-note">Have a venue or event to suggest? <a href="#contact">Get in touch</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Emergency Contact + FAQ Section -->
-        <section class="emergency-section" aria-labelledby="emergency-heading">
+        <section class="emergency-section fade-in-section" aria-labelledby="emergency-heading">
             <div class="container">
                 <header class="section-header">
                     <p class="section-kicker">If something has already happened</p>
@@ -442,7 +538,7 @@
             </div>
         </section>
 
-        <section class="faq-section" aria-labelledby="faq-heading">
+        <section class="faq-section fade-in-section" aria-labelledby="faq-heading">
             <div class="container">
                 <header class="section-header">
                     <p class="section-kicker">Questions you might have</p>
@@ -469,6 +565,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- Final Call to Action -->
+        <section class="cta-section fade-in-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <div class="cta-inner">
+                    <div class="cta-text">
+                        <h2 id="cta-heading">Ready to make online life feel calmer?</h2>
+                        <p>Start by checking one message today. It takes less than a minute, and it might save you or someone you love from a stressful scam.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="#analyzer" class="btn btn-primary btn-large">
+                            <span class="btn-text">Get started free</span>
+                            <span class="btn-icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -476,21 +590,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <span class="logo-text">Digital Guardians</span>
-                    </div>
-                    <p class="footer-tagline">Safe and Savvy Seniors</p>
+                    <img src="assets/logo.png" alt="Digital Guardians: Safe and Savvy Seniors" class="logo-img logo-img-footer" width="220" height="80" />
                 </div>
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <ul>
                         <li><a href="#analyzer">Check for Scams</a></li>
                         <li><a href="learning.html">Learn & Practice</a></li>
                         <li><a href="#about">About Us</a></li>
+                        <li><a href="#updates">Blog & Updates</a></li>
                         <li><a href="#privacy">Privacy Policy</a></li>
                     </ul>
                 </nav>
