@@ -1,359 +1,94 @@
-# Digital Guardians: Safe and Savvy Seniors
+# 🛡️ Digital Guardians
 
-## A Nonprofit Digital Safety Platform for Older Adults
+> An accessible cybersecurity education platform designed to protect seniors from online scams.
 
-![Digital Guardians Logo](assets/images/logo-placeholder.png)
-
-**Digital Guardians** is a mission-driven, ultra-accessible web platform designed to help seniors (60-70 years old) identify scams, learn safe digital habits, and build confidence with technology. Built with empathy and accessibility at its core.
-
----
-
-## 🌟 Mission
-
-To empower seniors to navigate the digital world safely and confidently, without fear or confusion. We believe everyone deserves to enjoy technology's benefits while being protected from those who would do harm.
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![WCAG](https://img.shields.io/badge/WCAG-2.1%20AA-blue?style=flat-square)](https://www.w3.org/WAI/WCAG21/quickref/)
+[![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
+[![Impact Microgrant Winner 2025](https://img.shields.io/badge/Impact%20Microgrant-Winner%202025-gold?style=flat-square)](https://github.com/Philipmag/digital-guardians)
 
 ---
 
-## 🎯 Target Audience
+## Overview
 
-- **Age:** 60-70 years
-- **Location:** North America (US, Canada)
-- **Language:** English
-- **Digital Skill Level:** Low to moderate
-- **Primary Concerns:** Fear of scams, difficulty with small text, uncertainty about clicking, anxiety about "breaking" something
+Seniors are disproportionately targeted by online scams, yet most cybersecurity tools are built for technically savvy users. Digital Guardians flips that — it's a web platform built from the ground up for users aged 60–70, with an AI-powered scam analyzer, step-by-step digital literacy tutorials, and always-on accessibility features like text-to-speech and high-contrast mode.
+
+This project won the **Impact Microgrant 2025** for its community impact and accessibility-first approach. It was built in collaboration with a cross-functional team using Agile methodology.
 
 ---
 
-## ✨ Core Features
+## Demo
 
-### 1. AI Scam Message Analyzer
-**What it does:**
-- Users paste emails, texts, or messages into a large, clearly labeled input
-- AI-driven analysis identifies common scam tactics
-- Results include clear verdict, confidence level, plain-English explanation, and actionable advice
+> **Status: Work in progress — backend API integration is ongoing.**
 
-**User Experience:**
-- No technical jargon ever
-- Visual indicators (icons, colors) for different outcomes
-- Reassuring language throughout
-- Privacy-first: messages not stored without explicit consent
+The frontend is fully functional and can be run by opening `index.html` in a browser. The backend Node.js API requires setup (see Getting Started).
 
-### 2. Learning Center
-**Tutorials Available:**
-- Email basics (reading, writing, managing)
-- Setting up email accounts
-- Creating strong passwords (simplified)
-- Resetting/recovering passwords
-- Recognizing scam emails
-- Identifying fake links
-- Safe browsing habits
-
-**Tutorial Design Principles:**
-- Max 1 action per step
-- Realistic visual placeholders for screenshots
-- Progress indicators ("Step 3 of 6")
-- Text-to-speech narration with speed control
-- Large tap targets
-- Mobile-friendly
-
-### 3. Accessibility Features (Always-On)
-- **Large default font:** 18px base, readable without zooming
-- **High contrast mode:** Toggle for enhanced visibility
-- **Text-to-speech:** Global narration toggle
-- **Adjustable narration speed:** 0.7x to 1.1x
-- **Skip links:** Keyboard navigation support
-- **ARIA labels:** Full screen reader compatibility
-- **Reduced motion:** Respects system preferences
+**Live frontend features:**
+- Paste any suspicious message into the scam analyzer — the rule engine returns an instant verdict.
+- Browse the Learning Center for step-by-step tutorials on email safety, passwords, and scam recognition.
+- Toggle high-contrast mode and text-to-speech narration from any page.
 
 ---
 
-## 📁 Project Structure
+## Features
 
-```
-Digital Guardians/
-├── index.html          # Main landing page with scam analyzer
-├── learning.html        # Learning Center with tutorials
-├── styles.css           # Core accessibility-first design system
-├── accessibility.css    # Additional accessibility enhancements
-├── script.js            # Main application logic
-├── learning.css         # Learning Center specific styles
-├── learning.js          # Tutorial management system
-├── README.md            # This file
-└── assets/
-    ├── images/          # Visual assets (placeholder)
-    └── audio/           # Audio narration files (placeholder)
+- **AI-Powered Scam Analyzer** — Users paste suspicious emails or texts; the system returns a verdict (safe/scam/suspicious), a confidence score, and a plain-English explanation written for non-technical users.
+- **Learning Center** — Step-by-step tutorials on email basics, password safety, and scam recognition, each limited to one action per step with progress indicators.
+- **WCAG 2.1 AA Accessibility** — 18px base font, high-contrast toggle, text-to-speech narration with speed control (0.7x–1.1x), full keyboard navigation, and ARIA labels throughout.
+- **Rate-Limited API** — The backend enforces request rate limits to prevent abuse of the AI analysis endpoint.
+- **Privacy-First Design** — Message content is hashed for duplicate detection only; no raw messages are stored without explicit user consent.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | HTML5, CSS3, JavaScript (ES6+) |
+| Backend | Node.js, Express |
+| AI Analysis | OpenAI GPT-4 (via backend API) |
+| Database | PostgreSQL (via backend) |
+| Accessibility | WCAG 2.1 AA, ARIA, Web Speech API |
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/Philipmag/digital-guardians
+cd digital-guardians
+
+# Frontend — open directly in browser
+open index.html
+
+# Backend API (optional for full AI analysis)
+cd backend
+cp .env.example .env   # add your OpenAI API key
+npm install
+node src/index.js
 ```
 
 ---
 
-## 🎨 Design System
+## How It Works
 
-### Color Palette
-| Color | Hex | Purpose |
-|-------|-----|---------|
-| Deep Teal | #1a5f7a | Primary brand color - trust, stability |
-| Sage Green | #57837b | Secondary - calm, growth |
-| Warm Amber | #c38d5c | Accent - friendly, helpful |
-| Warm White | #fdfcf8 | Background - easy on eyes |
-| Forest Green | #2d6a4f | Success indicators |
-| Deep Red | #b91c1c | Danger/warning |
-| Near Black | #1a1a1a | Primary text |
-
-### Typography
-- **Font:** System UI / Segoe UI / Arial (simple, familiar)
-- **Base size:** 18px (larger than standard)
-- **Line height:** 1.6 (readable)
-- **Max line width:** 70ch (optimal reading)
-
-### Touch Targets
-- **Minimum button height:** 48-56px
-- **Minimum tap area:** 44x44px
-- **Spacing between interactive elements:** 8px+
+1. **User submits a message** → Frontend sends a POST request to `/v1/analyze` with the message content.
+2. **Rule engine pre-screens** → `services/ruleEngine.js` checks for known scam patterns (urgency language, suspicious links, authority impersonation) and returns an instant verdict for clear-cut cases.
+3. **AI deep-analysis** → For ambiguous cases, `services/aiAnalyzer.js` sends the message to GPT-4 with a structured prompt that returns scam type, red flags, and manipulation tactics in JSON.
+4. **Plain-English response** → The result is translated into reassuring, jargon-free language before being displayed to the user.
 
 ---
 
-## 🔒 Privacy & Security
+## What I Learned
 
-### Our Promise
-1. **No storage without consent:** Messages pasted for analysis are not stored unless the user explicitly agrees
-2. **No data sharing:** User data is never sold or shared with third parties
-3. **Transparent practices:** Privacy policy written in plain language
-4. **Secure by default:** HTTPS, no unnecessary data collection
-
-### Privacy Notice (Displayed to Users)
-> "Your privacy matters: Messages you paste are analyzed but not stored. We never share your data."
+- **Accessibility is a design constraint, not an afterthought** — building for 18px base fonts and high-contrast mode from day one forced better layout decisions across the entire UI.
+- **Rule-based + AI hybrid systems outperform either alone** — the rule engine catches obvious scams instantly (low latency), while GPT-4 handles nuanced social engineering that pattern matching misses.
+- **Seniors need reassurance, not warnings** — user testing revealed that alarming language ("DANGER: SCAM DETECTED") caused anxiety; replacing it with calm, instructional language improved trust significantly.
 
 ---
 
-## 🚀 Getting Started
+## Roadmap
 
-### Local Development
-1. Clone or download the project
-2. Open `index.html` in any modern web browser
-3. No build process required (pure HTML/CSS/JS)
-
-### Browser Support
-- Chrome/Edge (recommended)
-- Firefox
-- Safari
-- Mobile browsers (iOS Safari, Chrome for Android)
-
-### Testing Accessibility
-- Use browser DevTools to test responsive design
-- Test with screen readers (NVDA, VoiceOver, JAWS)
-- Test keyboard-only navigation
-- Test with reduced motion enabled
-
----
-
-## 📱 Mobile & Device Support
-
-### iPhone Support
-- **Tested models:** iPhone 7, iPhone 11, latest iPhone
-- **Design considerations:**
-  - Large touch targets
-  - No small gestures required
-  - Portrait and landscape support
-  - Safari compatibility
-
-### Android Support
-- **Approach:** Mixed manufacturer compatibility
-- **Design considerations:**
-  - Chrome for Android primary target
-  - Consistent layout across screen sizes
-  - Large touch targets
-  - No hidden menus
-
-### Responsive Breakpoints
-- **Desktop:** > 1024px
-- **Tablet:** 768px - 1024px
-- **Mobile:** < 768px
-- **Small Mobile:** < 480px
-
----
-
-## 🧠 AI Analysis Logic
-
-### Detection Categories
-The scam analyzer checks for:
-
-1. **Urgency Indicators**
-   - "urgent", "immediately", "act now", "limited time"
-
-2. **Authority Claims**
-   - "government", "IRS", "bank", "federal", "official"
-
-3. **Financial Requests**
-   - "wire transfer", "gift card", "bitcoin", "payment"
-
-4. **Personal Information Requests**
-   - "social security", "password", "verify identity"
-
-5. **Suspicious Links**
-   - "click here", URL shorteners (bit.ly, tinyurl)
-
-6. **Suspicious Senders**
-   - Free email domains (@gmail.com, @yahoo.com)
-
-7. **Generic Greetings**
-   - "dear customer", "valued customer"
-
-8. **Threats**
-   - "arrest", "legal action", "suspended", "locked"
-
-### Confidence Scoring
-- **High Confidence (4+ indicators):** Clear scam
-- **Medium Confidence (2-3 indicators):** Likely scam
-- **Low Confidence (1 indicator):** Possible concern
-- **Safe (0 indicators):** No obvious red flags
-
----
-
-## 📋 Content Structure
-
-### Homepage Sections
-1. Hero (tagline + encouragement)
-2. Scam Analyzer (main feature)
-3. How It Works (3-step process)
-4. Learning Center Teaser
-5. About Digital Guardians
-6. Emergency Resources (scam recovery)
-
-### Learning Center Categories
-1. **Email Basics** (2 tutorials)
-   - Reading email
-   - Setting up email
-2. **Passwords** (3 tutorials)
-   - Creating strong passwords
-   - Resetting passwords
-   - Managing multiple passwords
-3. **Spotting Scams** (4 tutorials)
-   - Recognizing scam emails
-   - Understanding why scams work
-   - Identifying fake links
-   - Safe digital habits
-4. **Safe Browsing** (2 tutorials)
-   - Recognizing trustworthy websites
-   - Browser safety basics
-
----
-
-## 🔮 Future Roadmap
-
-### Phase 2: Enhanced Protection
-- [ ] **Voice Call Scam Detection:** Analyze recorded voice messages
-- [ ] **QR Code Safety:** Check QR codes before scanning
-- [ ] **Multi-language Support:** Spanish, French
-- [ ] **SMS/Text Message Analysis:** Full SMS support
-- [ ] **Social Media Protection:** Facebook, Instagram analysis
-
-### Phase 3: Community & Support
-- [ ] **Volunteer Buddy System:** Trained volunteers for 1-on-1 help
-- [ ] **Community Forums:** Peer support community
-- [ ] **Live Chat Support:** Real-time help from volunteers
-- [ ] **Phone Support:** For those who prefer telephone
-- [ ] **Family Dashboard:** Optional family alerts (with consent)
-
-### Phase 4: Advanced Features
-- [ ] **Browser Extension:** Real-time scam warnings while browsing
-- [ ] **Mobile App:** Native iOS/Android apps
-- [ ] **Offline Mode:** Downloadable resources
-- [ ] **Video Tutorials:** Supplementary video content
-- [ ] **Gamification:** Achievement badges for learning
-
-### Phase 5: Scale & Impact
-- [ ] **Partner Integration:** Banks, credit unions
-- [ ] **Healthcare Partnerships:** Medicare fraud protection
-- [ ] **Government Recognition:** Certified nonprofit status
-- [ ] **Research Partnerships:** Academic impact studies
-- [ ] **International Expansion:** UK, Australia, EU
-
----
-
-## 🏢 Organization
-
-### Nonprofit Status
-- **Type:** 501(c)(3) nonprofit organization (target)
-- **Mission:** Protect seniors from digital fraud
-- **Values:** Trust, patience, non-judgment, clarity
-
-### Brand Personality
-- ✅ Trustworthy
-- ✅ Patient
-- ✅ Reassuring
-- ✅ Non-judgmental
-- ✅ Plainspoken
-
-### Tone Guidelines
-- ❌ Never use fear-based language
-- ❌ Never imply user "should have known better"
-- ✅ Always reassure and encourage
-- ✅ Use "we" and "you" frequently
-- ✅ Acknowledge scam sophistication
-
----
-
-## 🤝 Contributing
-
-### Development Priorities
-1. **Accessibility First:** Every change must pass WCAG 2.1 AA
-2. **Senior Testing:** Regular testing with target demographic
-3. **Plain Language:** Content reviewed for simplicity
-4. **Performance:** Fast load times, especially on older devices
-
-### Design Review Checklist
-- [ ] Font size minimum 18px
-- [ ] Color contrast ratio 4.5:1+
-- [ ] Touch targets 44x44px minimum
-- [ ] No auto-playing audio
-- [ ] No fast animations
-- [ ] Clear error messages in plain language
-- [ ] Confirmation before destructive actions
-
----
-
-## 📞 Emergency Resources
-
-### If You Suspect a Scam
-1. **Don't panic** — These things happen to smart people
-2. **Stop contact** with the person/website
-3. **Call your bank** using the number on your card
-4. **Change passwords** for affected accounts
-5. **Report it** to help protect others
-
-### Where to Report
-- **USA:** FTC ReportFraud.ftc.gov
-- **Canada:** Canadian Anti-Fraud Centre
-- **Local Police:** Non-emergency line
-
----
-
-## 📄 License
-
-This project is dedicated to the public domain under the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) dedication.
-
-**Use it, modify it, share it — for the protection of seniors everywhere.**
-
----
-
-## 🙏 Acknowledgments
-
-- Senior advocacy organizations for input and testing
-- Accessibility consultants for WCAG guidance
-- Cybersecurity experts for scam pattern analysis
-- All volunteers who make this mission possible
-
----
-
-## 📞 Contact
-
-**Digital Guardians**
-- Website: [placeholder]
-- Email: [placeholder]
-- Address: [placeholder]
-
-*This project was built with love, patience, and a deep respect for the wisdom and dignity of older adults.*
-
----
-
-**Remember:** You're doing the right thing by learning. Scams are getting harder to spot, and asking for help is the smart thing to do. You've got this! 🌟
+- [ ] Deploy the backend API to Railway or Render and connect the live AI analyzer to the frontend.
+- [ ] Add user progress tracking so returning users can resume tutorials where they left off.
+- [ ] Expand the tutorial library with video walkthroughs and interactive quizzes.
