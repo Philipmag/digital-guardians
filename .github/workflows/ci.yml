@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      # No lockfile is committed yet, so `npm ci` is not usable. Syntax-check
+      # every module instead of running `jest` (no test suite exists yet).
+      - name: Syntax check all modules
+        run: find src -name '*.js' -print0 | xargs -0 -n1 node --check
+
+      - name: Verify declared npm scripts resolve to real files
+        run: |
+          node -e '
+            const pkg = require("./package.json");
+            const fs = require("fs");
+            let bad = [];
+            for (const [name, cmd] of Object.entries(pkg.scripts || {})) {
+              const m = cmd.match(/(?:node|nodemon)\s+(\S+\.js)/);
+              if (m && !fs.existsSync(m[1])) bad.push(`${name} -> ${m[1]}`);
+            }
+            if (bad.length) {
+              console.error("npm scripts reference missing files:\n  " + bad.join("\n  "));
+              process.exit(1);
+            }
+            console.log("all script targets exist");
+          '
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Syntax check front-end scripts
+        run: for f in *.js; do node --check "$f"; done
