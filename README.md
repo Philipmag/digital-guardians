@@ -1,5 +1,7 @@
 # 🛡️ Digital Guardians
 
+[![CI](https://github.com/Philipmag/digital-guardians/actions/workflows/ci.yml/badge.svg)](https://github.com/Philipmag/digital-guardians/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > An accessible cybersecurity education platform designed to protect seniors from online scams.
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
