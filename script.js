@@ -758,6 +758,35 @@ document.addEventListener('DOMContentLoaded', () => {
     AccessibilityController.init();
     AudioController.init();
 
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
+    // Fade-in on scroll
+    const fadeSections = document.querySelectorAll('.fade-in-section');
+    if ('IntersectionObserver' in window && fadeSections.length > 0) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+        fadeSections.forEach(section => observer.observe(section));
+    } else {
+        fadeSections.forEach(section => section.classList.add('is-visible'));
+    }
+
     // Form submission handler
     const form = document.getElementById('scamAnalyzerForm');
     if (form) {

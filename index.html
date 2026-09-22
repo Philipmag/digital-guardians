@@ -15,32 +15,39 @@
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
-            <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                </svg>
-                <span class="logo-text">Digital Guardians</span>
-            </div>
-            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Digital Guardians home">
+                <img src="assets/logo.png" alt="Digital Guardians: Safe and Savvy Seniors" class="logo-img" width="220" height="80" />
+            </a>
+            <nav id="mainNav" class="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="#analyzer" class="nav-link active">Check for Scams</a></li>
-                    <li><a href="learning.html" class="nav-link">Learn & Practice</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#analyzer" class="nav-link active">Product</a></li>
+                    <li><a href="#how-heading" class="nav-link">How it works</a></li>
+                    <li><a href="#about" class="nav-link">For who?</a></li>
+                    <li><a href="#plans-heading" class="nav-link">Plans</a></li>
+                    <li><a href="#testimonials-heading" class="nav-link">Testimonials</a></li>
+                    <li><a href="#updates" class="nav-link">Blog</a></li>
                 </ul>
             </nav>
-            <!-- Accessibility Controls -->
-            <div class="accessibility-controls" aria-label="Accessibility options">
-                <button class="a11y-btn" id="textSizeBtn" aria-label="Increase text size">
-                    <span aria-hidden="true">A+</span>
-                </button>
-                <button class="a11y-btn" id="audioToggleBtn" aria-label="Toggle audio narration">
-                    <span aria-hidden="true">🔊</span>
-                </button>
-                <button class="a11y-btn" id="contrastBtn" aria-label="Toggle high contrast">
-                    <span aria-hidden="true">◐</span>
-                </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="header-actions">
+                <a href="#analyzer" class="btn btn-primary btn-small header-cta">
+                    <span class="btn-text">Start checking</span>
+                </a>
+                <!-- Accessibility Controls -->
+                <div class="accessibility-controls" aria-label="Accessibility options">
+                    <button class="a11y-btn" id="textSizeBtn" aria-label="Increase text size">
+                        <span aria-hidden="true">A+</span>
+                    </button>
+                    <button class="a11y-btn" id="audioToggleBtn" aria-label="Toggle audio narration">
+                        <span aria-hidden="true">🔊</span>
+                    </button>
+                    <button class="a11y-btn" id="contrastBtn" aria-label="Toggle high contrast">
+                        <span aria-hidden="true">◐</span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -50,14 +57,102 @@
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-heading">
             <div class="container">
-                <h1 id="hero-heading">Safe and Savvy Seniors</h1>
-                <p class="hero-subtitle">Your friendly guide to staying safe online. Let's check messages together.</p>
-                <p class="hero-encourage">You're doing the right thing by checking — scams are getting harder to spot.</p>
+                <div class="hero-layout">
+                    <div class="hero-copy">
+                        <p class="hero-eyebrow">Your online safety companion</p>
+                        <h1 id="hero-heading">Safe and Savvy Seniors</h1>
+                        <p class="hero-subtitle">Your friendly guide to staying safe online. Check messages, learn the red flags, and feel confident every time you click.</p>
+                        <p class="hero-encourage">You're doing the right thing by checking — even very smart people get tricked by modern scams.</p>
+                        <div class="hero-actions">
+                            <a href="#analyzer" class="btn btn-primary btn-large">
+                                <span class="btn-text">Check a message now</span>
+                                <span class="btn-icon" aria-hidden="true">→</span>
+                            </a>
+                            <a href="learning.html" class="btn btn-secondary">
+                                <span class="btn-text">Explore tutorials</span>
+                            </a>
+                        </div>
+                        <p class="hero-note">No signup, no judgment — just clear, gentle guidance in plain language.</p>
+                    </div>
+                    <aside class="hero-panel" aria-label="Example of how Digital Guardians helps">
+                        <div class="hero-panel-header">
+                            <div class="hero-pill">
+                                <span aria-hidden="true">✓</span>
+                                <span>Scam check in under 1 minute</span>
+                            </div>
+                            <p class="hero-panel-title">For you or a loved one</p>
+                        </div>
+                        <div class="hero-metrics" aria-hidden="true">
+                            <div class="hero-metric">
+                                <p class="hero-metric-label">Messages reviewed</p>
+                                <p class="hero-metric-value">1,200+</p>
+                                <p class="hero-metric-caption">Practice on real-world examples</p>
+                            </div>
+                            <div class="hero-metric">
+                                <p class="hero-metric-label">Peace-of-mind score</p>
+                                <p class="hero-metric-value">9.2/10</p>
+                                <p class="hero-metric-caption">Users feel safer after checking</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Visual Banner -->
+        <section class="product-visual-banner fade-in-section" aria-label="Digital Guardians in action">
+            <div class="container">
+                <div class="product-visual-card">
+                    <div class="product-visual-header">
+                        <span class="product-pill">Live scam check demo</span>
+                    </div>
+                    <div class="product-visual-body">
+                        <div class="product-visual-left">
+                            <div class="product-line product-line-strong"></div>
+                            <div class="product-line"></div>
+                            <div class="product-line product-line-muted"></div>
+                            <div class="product-metric-row">
+                                <span class="product-metric-label">Risk level</span>
+                                <span class="product-metric-value">High</span>
+                            </div>
+                        </div>
+                        <div class="product-visual-right">
+                            <div class="product-tag product-tag-danger">Suspicious links</div>
+                            <div class="product-tag product-tag-warning">Urgent language</div>
+                            <div class="product-tag product-tag-safe">Suggested next step</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Strip -->
+        <section class="benefits-strip fade-in-section" aria-labelledby="benefits-heading">
+            <div class="container">
+                <h2 id="benefits-heading" class="section-title benefits-title">Why people trust Digital Guardians</h2>
+                <div class="benefits-grid">
+                    <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">◎</div>
+                        <p><strong>Clarity in minutes:</strong> Turn a confusing message into a clear “safe or risky” call without guessing.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">✦</div>
+                        <p><strong>Plain language:</strong> Explanations are written for real people, not tech experts or lawyers.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">🤝</div>
+                        <p><strong>Support for loved ones:</strong> Caregivers can quickly review messages with parents or grandparents.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <div class="benefit-icon" aria-hidden="true">✓</div>
+                        <p><strong>Habits that last:</strong> Short lessons help you spot red flags before they become problems.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
         <!-- Scam Analyzer Section -->
-        <section id="analyzer" class="analyzer-section" aria-labelledby="analyzer-heading">
+        <section id="analyzer" class="analyzer-section fade-in-section" aria-labelledby="analyzer-heading">
             <div class="container">
                 <h2 id="analyzer-heading">Check a Message for Scams</h2>
                 <p class="section-description">Copy and paste an email, text, or message below. We'll help you understand if it's safe.</p>
@@ -101,44 +196,78 @@
         </section>
 
         <!-- How It Works Section -->
-        <section class="how-it-works" aria-labelledby="how-heading">
+        <section class="how-it-works fade-in-section" aria-labelledby="how-heading">
             <div class="container">
-                <h2 id="how-heading">How We Help You</h2>
+                <header class="section-header">
+                    <p class="section-kicker">Method</p>
+                    <h2 id="how-heading" class="section-title">A simple 3-step safety check</h2>
+                    <p class="section-intro">Digital Guardians walks you through each message calmly, so you always know what to look for and what to do next.</p>
+                </header>
                 <div class="steps-grid">
                     <article class="step-card">
-                        <div class="step-number" aria-hidden="true">1</div>
-                        <h3>You Paste the Message</h3>
-                        <p>Simply copy and paste any message you're unsure about. No technical skills needed.</p>
+                        <div class="step-number" aria-hidden="true">01</div>
+                        <h3>Understand what you received</h3>
+                        <ul class="step-list">
+                            <li>Paste any email, text, or message you’re unsure about.</li>
+                            <li>Include links, phone numbers, and names if you can.</li>
+                            <li>Optionally add a short note about what worries you.</li>
+                        </ul>
+                        <p class="step-result"><strong>Result:</strong> A clear view of what the message is really asking you to do.</p>
                     </article>
                     <article class="step-card">
-                        <div class="step-number" aria-hidden="true">2</div>
-                        <h3>We Analyze It</h3>
-                        <p>Our system checks for common scam tricks using AI trained on the latest threats.</p>
+                        <div class="step-number" aria-hidden="true">02</div>
+                        <h3>Spot the red flags</h3>
+                        <ul class="step-list">
+                            <li>We highlight urgency, pressure, or strange requests.</li>
+                            <li>You see which parts are risky and why.</li>
+                            <li>We suggest safer options when something looks off.</li>
+                        </ul>
+                        <p class="step-result"><strong>Result:</strong> You know exactly which details should make you careful.</p>
                     </article>
                     <article class="step-card">
-                        <div class="step-number" aria-hidden="true">3</div>
-                        <h3>You Get Clear Advice</h3>
-                        <p>We explain what's wrong (or right) in plain language you can understand.</p>
+                        <div class="step-number" aria-hidden="true">03</div>
+                        <h3>Act with confidence</h3>
+                        <ul class="step-list">
+                            <li>Follow simple, step-by-step advice for what to do next.</li>
+                            <li>Practice similar situations in the learning area.</li>
+                            <li>Share the guidance with family or friends if needed.</li>
+                        </ul>
+                        <p class="step-result"><strong>Result:</strong> Fewer doubts, fewer scares, and more calm decisions online.</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- Learning Teaser Section -->
-        <section class="learning-teaser" aria-labelledby="learn-heading">
+        <section class="learning-teaser fade-in-section" aria-labelledby="learn-heading">
             <div class="container">
                 <div class="teaser-content">
                     <div class="teaser-text">
-                        <h2 id="learn-heading">Learn at Your Own Pace</h2>
-                        <p>Not sure if a message is a scam? Want to learn safer habits? Our step-by-step tutorials are designed just for you.</p>
-                        <ul class="tutorial-topics">
-                            <li>How to spot scam emails</li>
-                            <li>Creating strong passwords</li>
-                            <li>Safe browsing habits</li>
-                            <li>And more...</li>
-                        </ul>
+                        <header class="section-header section-header-left">
+                            <p class="section-kicker">Learn</p>
+                            <h2 id="learn-heading" class="section-title">Build safer habits, one lesson at a time</h2>
+                            <p class="section-intro">Short, practical tutorials help you (or someone you love) feel more at ease online — even if you don’t consider yourself “good with computers.”</p>
+                        </header>
+                        <div class="learning-columns">
+                            <div class="learning-column">
+                                <h3>Spotting scams</h3>
+                                <ul class="tutorial-topics">
+                                    <li>How to read emails safely</li>
+                                    <li>Recognizing fake texts and calls</li>
+                                    <li>Avoiding “too good to be true” offers</li>
+                                </ul>
+                            </div>
+                            <div class="learning-column">
+                                <h3>Staying secure</h3>
+                                <ul class="tutorial-topics">
+                                    <li>Creating and saving strong passwords</li>
+                                    <li>Safe browsing and shopping</li>
+                                    <li>What to do if something feels wrong</li>
+                                </ul>
+                            </div>
+                        </div>
                         <a href="learning.html" class="btn btn-secondary btn-large">
-                            <span class="btn-text">Browse Tutorials</span>
+                            <span class="btn-text">Browse all tutorials</span>
                             <span class="btn-icon" aria-hidden="true">→</span>
                         </a>
                     </div>
@@ -154,16 +283,57 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about-section" aria-labelledby="about-heading">
+        <section id="about" class="about-section fade-in-section" aria-labelledby="about-heading">
             <div class="container">
-                <h2 id="about-heading">About Digital Guardians</h2>
+                <header class="section-header">
+                    <p class="section-kicker">For who?</p>
+                    <h2 id="about-heading" class="section-title">Built for seniors, and the people who support them</h2>
+                    <p class="section-intro">Digital Guardians is for anyone who wants to feel safer online without having to become a “tech expert.”</p>
+                </header>
+
+                <div class="audience-grid">
+                    <article class="audience-card">
+                        <h3>Seniors who want to feel in control</h3>
+                        <p class="audience-label">You might:</p>
+                        <ul class="audience-list">
+                            <li>Worry about clicking on the wrong link or phone number.</li>
+                            <li>Feel overwhelmed by official-looking emails and alerts.</li>
+                            <li>Prefer simple, calm explanations instead of technical talk.</li>
+                        </ul>
+                        <p class="audience-label">What Digital Guardians brings:</p>
+                        <ul class="audience-list">
+                            <li>A quiet space to “check before you click.”</li>
+                            <li>Clear wording that tells you what’s safe, what’s not, and why.</li>
+                            <li>Practice lessons you can revisit at your own pace.</li>
+                        </ul>
+                        <p class="audience-benefit"><strong>Concrete benefit:</strong> You stay independent online, with fewer doubts and fewer scares.</p>
+                    </article>
+
+                    <article class="audience-card">
+                        <h3>Family, caregivers, and community helpers</h3>
+                        <p class="audience-label">You might:</p>
+                        <ul class="audience-list">
+                            <li>Regularly get “Is this a scam?” questions from loved ones.</li>
+                            <li>Want a simple way to review messages together on the phone or in person.</li>
+                            <li>Need trusted resources to share in workshops or group sessions.</li>
+                        </ul>
+                        <p class="audience-label">What Digital Guardians brings:</p>
+                        <ul class="audience-list">
+                            <li>A shared tool to walk through messages step by step.</li>
+                            <li>Teaching materials that turn one-time help into lasting habits.</li>
+                            <li>Language you can reuse to explain online risks gently.</li>
+                        </ul>
+                        <p class="audience-benefit"><strong>Concrete benefit:</strong> You support others without carrying all the mental load yourself.</p>
+                    </article>
+                </div>
+
                 <div class="about-content">
                     <div class="about-mission">
-                        <h3>Our Mission</h3>
-                        <p>We're here to help seniors feel confident and safe online. We believe everyone deserves to enjoy technology without fear.</p>
+                        <h3>Our mission</h3>
+                        <p>We’re here to help seniors feel confident and safe online. No shame, no blaming — just support, tools, and guidance that respect your experience and your time.</p>
                     </div>
                     <div class="about-values">
-                        <h3>Our Promise to You</h3>
+                        <h3>Our promise to you</h3>
                         <ul class="values-list">
                             <li>
                                 <strong>Patient:</strong> We take time to explain things clearly.
@@ -172,10 +342,10 @@
                                 <strong>Non-judgmental:</strong> Everyone learns at their own pace.
                             </li>
                             <li>
-                                <strong>Private:</strong> Your data stays yours.
+                                <strong>Private:</strong> Your messages are analyzed but never stored or shared.
                             </li>
                             <li>
-                                <strong>Free:</strong> Our services are always free.
+                                <strong>Free:</strong> Our tools are free to use for you and your loved ones.
                             </li>
                         </ul>
                     </div>
@@ -183,23 +353,176 @@
             </div>
         </section>
 
-        <!-- Emergency Contact Section -->
-        <section class="emergency-section" aria-labelledby="emergency-heading">
+        <!-- Levels of Support / Plans Section -->
+        <section class="plans-section fade-in-section" aria-labelledby="plans-heading">
             <div class="container">
-                <h2 id="emergency-heading">Think You've Been Scammed?</h2>
+                <header class="section-header">
+                    <p class="section-kicker">Levels of support</p>
+                    <h2 id="plans-heading" class="section-title">Use Digital Guardians the way that suits you best</h2>
+                    <p class="section-intro">Whether you’re checking messages on your own, learning together as a family, or supporting a whole community, you can adapt how you use the tool.</p>
+                </header>
+
+                <div class="plans-grid">
+                    <article class="plan-card">
+                        <h3>Self-check</h3>
+                        <p>Ideal if you want a quiet, private way to test emails and texts before you respond.</p>
+                        <ul class="plan-list">
+                            <li>Paste messages whenever you’re unsure.</li>
+                            <li>Revisit key lessons when you have time.</li>
+                        </ul>
+                    </article>
+
+                    <article class="plan-card">
+                        <h3>Learn together</h3>
+                        <p>Perfect for families who want to support a parent or grandparent over the phone or in person.</p>
+                        <ul class="plan-list">
+                            <li>Screen-share or sit side by side to review messages.</li>
+                            <li>Save favorite lessons to return to as reminders.</li>
+                        </ul>
+                    </article>
+
+                    <article class="plan-card">
+                        <h3>Community & workshops</h3>
+                        <p>Useful for librarians, senior centers, and community groups running digital safety sessions.</p>
+                        <ul class="plan-list">
+                            <li>Use real-world examples in a safe environment.</li>
+                            <li>Turn one-off events into ongoing learning habits.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story / Founder Section -->
+        <section class="story-section fade-in-section" aria-labelledby="story-heading">
+            <div class="container">
+                <header class="section-header section-header-left">
+                    <p class="section-kicker">Our story</p>
+                    <h2 id="story-heading" class="section-title">Born from real conversations with seniors</h2>
+                </header>
+                <div class="story-layout">
+                    <div class="story-text">
+                        <p>Digital Guardians grew out of simple questions seniors were already asking: “Is this email real?” “Can I trust this text?” “I don’t want to bother my family every time.”</p>
+                        <p>Instead of more fear, we wanted to offer calm structure — a way to slow down, look closely at a message, and make a decision that feels safe and confident.</p>
+                        <p>We listened to older adults, caregivers, and community leaders to design an experience that feels friendly, simple, and respectful. Every word is chosen to reduce pressure, not add it.</p>
+                        <p>Today, Digital Guardians continues to evolve with real feedback, new scam patterns, and one clear goal: help more people enjoy the internet without constant worry.</p>
+                    </div>
+                    <div class="story-media" aria-hidden="true">
+                        <div class="avatar-placeholder"></div>
+                        <p class="story-caption">A calm, trusted companion for your online life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section fade-in-section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-kicker">What people say</p>
+                    <h2 id="testimonials-heading" class="section-title">More calm, fewer scary surprises</h2>
+                </header>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <p class="testimonial-quote">“Before, every strange email made my heart race. Now I paste it into Digital Guardians, read the explanation, and I know exactly what to do. I feel like I have someone looking over my shoulder, kindly.”</p>
+                        <p class="testimonial-name">– Marianne, 72, retired teacher</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <p class="testimonial-quote">“Helping my dad with scams used to mean long phone calls and trying to describe screenshots. With this tool, we walk through messages together and he understands the ‘why’, not just ‘yes’ or ‘no’.”</p>
+                        <p class="testimonial-name">– Alex, adult child & caregiver</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <p class="testimonial-quote">“In our community workshops, Digital Guardians turns blurry, worrying examples into clear teaching moments. People leave with practical steps they actually remember.”</p>
+                        <p class="testimonial-name">– Community program coordinator</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates Section (trainings + venues) -->
+        <section id="updates" class="updates-section fade-in-section" aria-labelledby="updates-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-kicker">Updates</p>
+                    <h2 id="updates-heading" class="section-title">New trainings and where to find us</h2>
+                    <p class="section-intro">Stay in the loop: upcoming workshops, new learning modules, and venues where Digital Guardians is in use or hosting sessions.</p>
+                </header>
+                <div class="updates-grid">
+                    <div class="updates-column">
+                        <h3 class="updates-column-title">New trainings</h3>
+                        <ul class="updates-list">
+                            <li class="update-item">
+                                <span class="update-badge">New</span>
+                                <div class="update-content">
+                                    <strong>Phishing emails — spot the signs</strong>
+                                    <p>Short module on recognizing fake sender addresses and urgent language. Available in the Learning hub.</p>
+                                </div>
+                            </li>
+                            <li class="update-item">
+                                <span class="update-badge">New</span>
+                                <div class="update-content">
+                                    <strong>Safe shopping online</strong>
+                                    <p>Tips for checking websites and payment requests before you buy. Added this month.</p>
+                                </div>
+                            </li>
+                            <li class="update-item">
+                                <div class="update-content">
+                                    <strong>Grandparent scam awareness</strong>
+                                    <p>Learn how “grandparent” and family-emergency scams work and how to respond calmly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="learning.html" class="btn btn-secondary btn-small">View all tutorials</a>
+                    </div>
+                    <div class="updates-column">
+                        <h3 class="updates-column-title">Venues & events</h3>
+                        <ul class="updates-list">
+                            <li class="update-item update-item-venue">
+                                <div class="update-content">
+                                    <strong>Community Center — North Branch</strong>
+                                    <p>Digital safety drop-in every first Tuesday, 2–4 p.m. Bring your device or questions.</p>
+                                </div>
+                            </li>
+                            <li class="update-item update-item-venue">
+                                <div class="update-content">
+                                    <strong>Senior Center — Westside</strong>
+                                    <p>Workshop “Check before you click” on the third Wednesday of each month.</p>
+                                </div>
+                            </li>
+                            <li class="update-item update-item-venue">
+                                <div class="update-content">
+                                    <strong>Library Tech Help Desk</strong>
+                                    <p>Staff trained on Digital Guardians; ask for a quick walkthrough at the desk.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="updates-note">Have a venue or event to suggest? <a href="#contact">Get in touch</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact + FAQ Section -->
+        <section class="emergency-section fade-in-section" aria-labelledby="emergency-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-kicker">If something has already happened</p>
+                    <h2 id="emergency-heading" class="section-title">Think you’ve been scammed? Here’s what to do.</h2>
+                    <p class="section-intro">You’re not alone. Take a breath, follow these steps, and reach out to the right people — the sooner you act, the more you can protect.</p>
+                </header>
                 <div class="emergency-content">
                     <div class="emergency-card">
-                        <h3>What to Do Now</h3>
+                        <h3>What to do right now</h3>
                         <ol class="emergency-steps">
-                            <li><strong>Don't panic.</strong> These things happen to smart people.</li>
-                            <li><strong>Stop all contact</strong> with the person or website.</li>
+                            <li><strong>Don’t panic.</strong> These things happen to smart, careful people every day.</li>
+                            <li><strong>Stop all contact</strong> with the person, number, or website.</li>
                             <li><strong>Call your bank</strong> using the number on the back of your card.</li>
                             <li><strong>Change passwords</strong> for any affected accounts.</li>
-                            <li><strong>Report it</strong> to help protect others.</li>
+                            <li><strong>Write down what happened</strong> so you can explain it clearly when you report it.</li>
                         </ol>
                     </div>
                     <div class="emergency-resources">
-                        <h3>Where to Report</h3>
+                        <h3>Where to report it</h3>
                         <ul class="resource-list">
                             <li>
                                 <strong>FTC (USA):</strong> <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">reportfraud.ftc.gov</a>
@@ -208,9 +531,54 @@
                                 <strong>Canadian Anti-Fraud Centre:</strong> <a href="https://www.antifraudcentre.ca" target="_blank" rel="noopener">antifraudcentre.ca</a>
                             </li>
                             <li>
-                                <strong>Local Police:</strong> Non-emergency line
-                            </li>
+                                <strong>Local police:</strong> Use the non-emergency line in your area.</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section fade-in-section" aria-labelledby="faq-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-kicker">Questions you might have</p>
+                    <h2 id="faq-heading" class="section-title">What Digital Guardians is (and isn’t)</h2>
+                    <p class="section-intro">A clear companion for online safety — not a bank, not a legal service, and not a replacement for official fraud reporting.</p>
+                </header>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <h3>Who is Digital Guardians for?</h3>
+                        <p>Primarily for seniors, their families, and community helpers who want a calm, structured way to check messages and build safer habits online.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>What does it actually do?</h3>
+                        <p>It helps you review suspicious messages, spot common scam patterns, and choose safer next steps, using simple language and practical examples.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Does it replace my bank or the police?</h3>
+                        <p>No. Digital Guardians does not move money, block transactions, or investigate crimes. If you think you’ve been scammed, you should still contact your bank and local authorities.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Do I need an account or to pay?</h3>
+                        <p>You can use the checker and learning resources without creating an account. Messages are analyzed but not stored, and the experience is designed to be as simple and low-pressure as possible.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="cta-section fade-in-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <div class="cta-inner">
+                    <div class="cta-text">
+                        <h2 id="cta-heading">Ready to make online life feel calmer?</h2>
+                        <p>Start by checking one message today. It takes less than a minute, and it might save you or someone you love from a stressful scam.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="#analyzer" class="btn btn-primary btn-large">
+                            <span class="btn-text">Get started free</span>
+                            <span class="btn-icon" aria-hidden="true">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -222,21 +590,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-                            <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <span class="logo-text">Digital Guardians</span>
-                    </div>
-                    <p class="footer-tagline">Safe and Savvy Seniors</p>
+                    <img src="assets/logo.png" alt="Digital Guardians: Safe and Savvy Seniors" class="logo-img logo-img-footer" width="220" height="80" />
                 </div>
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <ul>
                         <li><a href="#analyzer">Check for Scams</a></li>
                         <li><a href="learning.html">Learn & Practice</a></li>
                         <li><a href="#about">About Us</a></li>
+                        <li><a href="#updates">Blog & Updates</a></li>
                         <li><a href="#privacy">Privacy Policy</a></li>
                     </ul>
                 </nav>
